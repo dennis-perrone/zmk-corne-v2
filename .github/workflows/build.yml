@@ -3,16 +3,25 @@ name: Build ZMK Firmware
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
-  meta:
-    runs-on: ubuntu-latest
-    outputs:
-      timestamp: ${{ steps.ts.outputs.timestamp }}
-    steps:
-      - id: ts
-        run: echo "timestamp=$(date +'%Y%m%d%H%M')" >> "$GITHUB_OUTPUT"
-
   build:
-    needs: meta
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
-    with:
-      artifact-name: firmware-${{ needs.meta.outputs.timestamp }}
+
+  rename-artifact:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Create timestamp
+        run: echo "ts=$(date +'%Y%m%d%H%M')" >> "$GITHUB_ENV"
+
+      - name: Download firmware artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: firmware
+          path: firmware
+
+      - name: Re-upload with new name
+        uses: actions/upload-artifact@v4
+        with:
+          name: firmware-${{ env.ts }}
+          path: firmware
