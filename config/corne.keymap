@@ -82,10 +82,10 @@
 
             display-name = "Lower";
             bindings = <
-&trans     &kp N1  &kp N2  &kp N3    &kp N4  &kp N5    &kp N6    &kp N7            &kp N8    &kp N9     &kp N0         &kp BSPC
-&kp LCTRL  &none   &none   &none     &none   &none     &kp LEFT  &kp DOWN          &kp UP    &kp RIGHT  &kp LG(EQUAL)  &kp PAGE_UP
-&trans     &none   &none   &none     &none   &none     &none     &kp LC(UP_ARROW)  &none     &none      &kp LG(MINUS)  &kp PAGE_DOWN
-                           &kp LGUI  &trans  &trans    &trans    &mo 3             &kp RALT
+&trans  &none  &none  &none     &none   &none     &kp N7        &kp N8  &kp N9    &none  &none          &kp BSPC
+&trans  &none  &none  &none     &none   &none     &kp NUMBER_4  &kp N5  &kp N6    &none  &kp LG(EQUAL)  &kp PAGE_UP
+&trans  &none  &none  &none     &none   &none     &kp N1        &kp N2  &kp N3    &none  &kp LG(MINUS)  &kp PAGE_DOWN
+                      &kp LGUI  &trans  &trans    &trans        &kp N0  &kp RALT
             >;
         };
 
@@ -122,5 +122,14 @@
         extra_2 { status = "reserved"; };
 
         extra_3 { status = "reserved"; };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        mod_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
     };
 };
