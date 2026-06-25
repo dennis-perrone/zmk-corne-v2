@@ -40,7 +40,7 @@ layers:
   - LCTRL
   - lower
   - {t: ENTER, h: LEFT SHIFT}
-  - {t: SPACE, h: Mod}
+  - {t: SPACE, h: mod}
   - {t: BACKSPACE, h: raise}
   - RIGHT SHIFT
   lower:
@@ -124,12 +124,12 @@ layers:
   - '|'
   - '~'
   - LGUI
-  - Mod
+  - mod
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
   - RALT
-  Mod:
+  mod:
   - ''
   - F1
   - F2
@@ -170,6 +170,49 @@ layers:
   - {t: ▽, type: trans}
   - SPACE
   - {t: RET, type: held}
+  - {t: ▽, type: trans}
+  - RALT
+  numpad:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - LGUI
+  - {t: ▽, type: trans}
+  - SPACE
+  - RET
   - {t: ▽, type: trans}
   - RALT
 combos:
