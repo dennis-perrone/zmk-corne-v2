@@ -38,7 +38,7 @@ layers:
   - /
   - RIGHT ALT
   - LCTRL
-  - '&lt 1'
+  - lower
   - {t: ENTER, h: LEFT SHIFT}
   - {t: SPACE, h: Mod}
   - {t: BACKSPACE, h: raise}
@@ -81,7 +81,7 @@ layers:
   - Gui+-
   - PAGE DOWN
   - LGUI
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '0'
