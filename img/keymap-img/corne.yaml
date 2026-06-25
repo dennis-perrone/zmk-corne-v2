@@ -42,7 +42,7 @@ layers:
   - {t: ENTER, h: LEFT SHIFT}
   - SPACE
   - {t: BACKSPACE, h: raise}
-  - RIGHT SHIFT
+  - {t: RSHFT, h: sys}
   lower:
   - {t: ▽, type: trans}
   - '1'
@@ -167,11 +167,11 @@ layers:
   - ''
   - ''
   - LGUI
-  - {type: held}
+  - {t: ▽, type: trans}
   - SPACE
   - RET
-  - {type: held}
-  - RALT
+  - {t: ▽, type: trans}
+  - {t: RALT, type: held}
   num:
   - ''
   - ''
