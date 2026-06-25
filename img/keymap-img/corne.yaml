@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: corne}
 layers:
   base:
-  - LMETA
+  - TAB
   - Q
   - W
   - E
@@ -12,7 +12,7 @@ layers:
   - I
   - O
   - P
-  - DELETE
+  - BACKSPACE
   - LCTRL
   - {t: A, h: LMETA}
   - {t: S, h: LALT}
@@ -36,7 +36,7 @@ layers:
   - ','
   - .
   - /
-  - RIGHT ALT
+  - DELETE
   - LCTRL
   - lower
   - {t: ENTER, h: LEFT SHIFT}
@@ -45,27 +45,27 @@ layers:
   - RIGHT SHIFT
   lower:
   - {t: ▽, type: trans}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
   - '7'
   - '8'
   - '9'
-  - ''
-  - ''
-  - BSPC
+  - '0'
+  - DELETE
   - {t: ▽, type: trans}
   - ''
   - ''
   - ''
   - ''
   - ''
-  - '4'
-  - '5'
-  - '6'
-  - ''
+  - LEFT
+  - DOWN
+  - UP
+  - RIGHT
   - Gui+=
   - PAGE UP
   - {t: ▽, type: trans}
@@ -73,10 +73,10 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - '1'
-  - '2'
-  - '3'
+  - numpad
+  - Sft+Gui+5
+  - Ctl+UP
+  - Ctl+DOWN
   - ''
   - Gui+-
   - PAGE DOWN
@@ -84,7 +84,7 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '0'
+  - mod
   - RALT
   raise:
   - {t: ▽, type: trans}
@@ -99,7 +99,7 @@ layers:
   - (
   - )
   - BSPC
-  - LCTRL
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -158,8 +158,8 @@ layers:
   - OUT TOG
   - OUT BLE
   - OUT USB
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
+  - ''
   - ''
   - ''
   - ''
@@ -180,6 +180,9 @@ layers:
   - ''
   - ''
   - ''
+  - '7'
+  - '8'
+  - '9'
   - ''
   - ''
   - ''
@@ -189,6 +192,9 @@ layers:
   - ''
   - ''
   - ''
+  - '4'
+  - '5'
+  - '6'
   - ''
   - ''
   - ''
@@ -196,25 +202,19 @@ layers:
   - ''
   - ''
   - ''
+  - {type: held}
+  - ''
+  - '1'
+  - '2'
+  - '3'
   - ''
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - LGUI
-  - {t: ▽, type: trans}
+  - {type: held}
   - SPACE
   - RET
-  - {t: ▽, type: trans}
-  - RALT
+  - '0'
+  - ''
 combos:
 - p: [17, 16]
   k: '['
